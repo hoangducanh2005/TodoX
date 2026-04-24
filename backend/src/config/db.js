@@ -3,13 +3,14 @@ import mongoose from 'mongoose';
 export const connectDB = async () => {
     try {
         await mongoose.connect(
-        "mongodb+srv://hoangducanh2005_db_user:LE2Hm4N1bMuWrQat@cluster0.7mdbnbk.mongodb.net/dev?appName=Cluster0"
+        process.env.MONGODB_CONNECTIONSTRING
         );
 
-        console.log("Connected to MongoDB successfully!");
+        console.log("Connected to MongoDB successfully hehehe!");
 
     } catch(error) {
         console.error("Error connecting to MongoDB:", error);
+        process.exit(1); // Exit the process with an error code (1)
     }
     
 };

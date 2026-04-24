@@ -3,6 +3,9 @@ import taskRoutes from './route/taskRouters.js';
 import dns from 'dns';
 dns.setServers(['8.8.8.8', '8.8.4.4']);
 import {connectDB} from './config/db.js'
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const app = express();
 
