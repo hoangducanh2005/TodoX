@@ -3,3 +3,5 @@ server.js đang dùng cú pháp ES Module:
 import express from 'express';
 
 -------
+package.json là file khai báo cấu hình của project Node.js 📦
+Nó giống như CMND của project backend/frontend: nói cho Node biết project này là gì, dùng thư viện nào, chạy bằng lệnh nào.
