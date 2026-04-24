@@ -1,21 +1,20 @@
- import expess from 'express';
+import express from 'express';
+import { 
+    createTask, 
+    deleteTask, 
+    getAllTasks, 
+    updateTask 
+} 
+from '../controllers/tasksControllers.js';
 
-const router = expess.Router();
+const router = express.Router();
 
-app.get('/api/tasks', (req, res) => {
-    res.status(200).send({ message: 'You have 36 tasks to do!' });
-});
+router.get('/', getAllTasks);
 
-app.post('/api/tasks', (req, res) => {
-    res.status(200).json({ message: 'Task created successfully!' });
-});
+router.post('/', createTask);
 
-app.put('/api/tasks/:id', (req, res) => {
-    res.status(200).json({ message: `Task updated successfully!` });
-});
+router.put('/:id', updateTask);
 
-app.delete('/api/tasks/:id', (req, res) => {
-    res.status(200).json({ message: `Task deleted successfully!` });
-});
+router.delete('/:id', deleteTask);
 
 export default router;
