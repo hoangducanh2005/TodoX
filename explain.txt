@@ -1,0 +1,5 @@
+server.js đang dùng cú pháp ES Module:
+
+import express from 'express';
+
+-------
