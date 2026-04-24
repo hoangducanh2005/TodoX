@@ -1,5 +1,5 @@
-export const getAllTasks = (req, res) => {
-    res.status(200).json({ message: 'You have 36 tasks to do!' });
+export const getAllTasks = (request, response) => {
+    response.status(200).send({message: "You have 36 tasks to do!"});
 };
 
 export const createTask = (req, res) => {

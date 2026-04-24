@@ -5,3 +5,15 @@ import express from 'express';
 -------
 package.json là file khai báo cấu hình của project Node.js 📦
 Nó giống như CMND của project backend/frontend: nói cho Node biết project này là gì, dùng thư viện nào, chạy bằng lệnh nào.
+------
+mongodb+srv://... của MongoDB Atlas cần giải tên host qua DNS SRV record.
+
+Khi bạn thêm (và không comment) hai dòng:
+
+thì Node sẽ dùng Google DNS để giải tên, và cluster0.7mdbnbk.mongodb.net được tìm thấy, nên kết nối thành công.
+
+Nếu không có dòng đó, Node sẽ dùng DNS mặc định của hệ thống bạn. Nếu DNS mặc định không trả về được record SRV cho Atlas, thì sẽ bị:
+Error connecting to MongoDB
+
+Tóm lại
+Không phải vì hai dòng đó “kết nối được database”, mà vì chúng sửa lại DNS resolver trước khi Mongoose kết nối.
