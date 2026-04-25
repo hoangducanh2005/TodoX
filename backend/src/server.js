@@ -12,6 +12,7 @@ const PORT = process.env.PORT || 5001; // Use the PORT from environment variable
 const app = express();
 
 connectDB();  // Connect to MongoDB
+app.use(express.json()); // Middleware to parse JSON request bodies
 
 app.use("/api/tasks", taskRoutes);
 
