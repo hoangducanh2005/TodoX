@@ -51,3 +51,29 @@ function App() {
     </div>
   );
 }
+
+-----
+shadcn/ui là một bộ component UI cho React.
+Nó cung cấp sẵn các thành phần giao diện đẹp như Button, Card, Dialog, Form, Table, Dropdown...
+Điểm đặc biệt
+
+shadcn/ui không phải thư viện component kiểu cài xong import từ package như MUI.
+
+Nó sẽ copy code component vào project của bạn, nên bạn có thể sửa thoải mái.
+
+Dùng với gì?
+
+Thường dùng với:
+
+React
+Next.js
+Vite
+Tailwind CSS
+Ví dụ component
+npx shadcn@latest add button
+
+Sau đó dùng:
+
+import { Button } from "@/components/ui/button";
+
+<Button>Add Task</Button>
