@@ -27,3 +27,27 @@ Nói một cách đơn giản, nếu một website thông thường chuyển tra
 thì React Router giúp ứng dụng của bạn chuyển đổi giữa các "trang" (Component) một cách mượt mà mà không cần tải lại trang.
  axious : gui va nhan data qua api
  lucide : icon 
+
+ Toast
+ Trong thư viện Sonner, Toast chính là cái "thông báo nhỏ" (pop-up) nhảy lên ở góc màn hình để phản hồi cho người dùng biết 
+ một hành động nào đó đã thành công, thất bại hoặc đang xử lý.
+ 2. Các thành phần chính khi dùng Sonner
+Để dùng được Toast, Sonner chia làm 2 phần:
+
+<Toaster />: Là "cái khay" chứa các thông báo. Bạn chỉ cần đặt nó một lần duy nhất ở file cha (như App.jsx hoặc Layout.jsx).
+
+toast(): Là hàm để bạn "bắn" ra thông báo bất cứ khi nào cần.
+
+import { Toaster, toast } from 'sonner';
+
+function App() {
+  return (
+    <div>
+      <Toaster position="top-right" richColors /> {/* Đặt cái khay ở đây */}
+      
+      <button onClick={() => toast.success('Đã gửi tin nhắn!')}>
+        Gửi ngay
+      </button>
+    </div>
+  );
+}
