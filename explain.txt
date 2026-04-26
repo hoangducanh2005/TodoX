@@ -17,3 +17,13 @@ Error connecting to MongoDB
 
 Tóm lại
 Không phải vì hai dòng đó “kết nối được database”, mà vì chúng sửa lại DNS resolver trước khi Mongoose kết nối.
+
+-----
+Frontend dependencies
+ npm install react-router sonner axios lucide-react
+ 4 package ta se can sonner de hien noti dang pop up
+ react router: quản lý định tuyến (routing) trong các ứng dụng React.
+Nói một cách đơn giản, nếu một website thông thường chuyển trang bằng cách tải lại toàn bộ trình duyệt (Reload), 
+thì React Router giúp ứng dụng của bạn chuyển đổi giữa các "trang" (Component) một cách mượt mà mà không cần tải lại trang.
+ axious : gui va nhan data qua api
+ lucide : icon 

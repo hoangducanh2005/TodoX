@@ -1,9 +1,10 @@
+import { createDeflate } from 'zlib';
 import Task from '../models/Tasks.js';
 
 
 export const getAllTasks = async (req, res) => {
     try {
-        const tasks = await Task.find();    // lay tat ca data tu database
+        const tasks = await Task.find().sort({ createdAt: -1 });    // lay tat ca data tu database // -1 = descending order, 1 = ascending order
         res.status(200).json(tasks);    //tra data duoiu dang json ve client
 
     } catch (error) {
