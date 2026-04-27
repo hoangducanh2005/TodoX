@@ -10,26 +10,26 @@ import Footer from "@/components/Footer";
 const HomePage = () => {
     return (
         <div className="min-h-screen w-full relative">
-  {/* Purple Radial Bloom Light Gradient */}
-  <div
+    {/* Radial Gradient Background */}
+    <div
     className="absolute inset-0 z-0"
     style={{
-      background: `radial-gradient(circle at center, #F3E8FF 0%, #DDD6FE 30%, #C4B5FD 60%, #A78BFA 100%)`,
+      background: "radial-gradient(125% 125% at 50% 10%, #fff 40%, #6366f1 100%)",
     }}
   />
   {/* Your Content/Components */}
             <div className = "container pt-8 mx-auto relative z-10"> 
-            <div className="w-full max-w-2xl -6 mx-auto space -y-6">
+            <div className = "w-full max-w-2xl p-6 mx-auto space-y-6">
                 {/* Header */}
                 <Header />
+                {/* Add Task */}
+                <AddTask />
                 {/* Stats and Filters */}
                 <StatsAndFilters />
                 {/* Task List */}
                 <TaskList />
-                {/* Add Task */}
-                <AddTask />
-
-                {/* Phan tran va loc theo hang */}
+            
+                {/* Phan trang va loc theo hang */}
                 <div className = "flex flex-col items-center justify-between gap-6 sm:flex-row">
                     <TaskListPagination />
                     <DateTimeFilters />
@@ -45,3 +45,4 @@ const HomePage = () => {
 
 
 export default HomePage;
+
