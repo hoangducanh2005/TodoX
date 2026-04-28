@@ -4,20 +4,20 @@ import TaskEmptyState from "./TaskEmptyState";
 const TaskList = () => {
   let filter = "all";
   const filteredTasks = [
-    {
-      _id: "1",
-      title: "học react",
-      status: "active",
-      completedAt: null,
-      createdAt: new Date(),
-    },
-    {
-      _id: "2",
-      title: "học js",
-      status: "complete",
-      completedAt: new Date(),
-      createdAt: new Date(),
-    },
+    // {
+    //   _id: "1",
+    //   title: "học react",
+    //   status: "active",
+    //   completedAt: null,
+    //   createdAt: new Date(),
+    // },
+    // {
+    //   _id: "2",
+    //   title: "học js",
+    //   status: "complete",
+    //   completedAt: new Date(),
+    //   createdAt: new Date(),
+    // },
   ];
 
   if (!filteredTasks || filteredTasks.length === 0) {

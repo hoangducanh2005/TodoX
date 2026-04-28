@@ -3,8 +3,8 @@ import { Badge } from "./ui/badge";
 import { FilterType } from "@/lib/data";
 import { Filter } from "lucide-react";
 import { Button } from "./ui/button";
-
-const StatsAndFilters = ({
+//thong ke va bo loc
+const StatsAndFilters = ({  // la phan 0 active, 0 completed
   completedTasksCount = 0,
   activeTasksCount = 0,
   filter = "all",
@@ -14,8 +14,8 @@ const StatsAndFilters = ({
     <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
       {/* phần thống kê */}
       <div className="flex gap-3">
-        {/* <Badge
-          variant="secondary"
+        <Badge
+          variant="secondary" // dung  bien the secondary de tao su khac biet voi badge thong ke
           className="bg-white/50 text-accent-foreground border-info/20"
         >
           {activeTasksCount} {FilterType.active}
@@ -25,7 +25,7 @@ const StatsAndFilters = ({
           className="bg-white/50 text-success border-success/20"
         >
           {completedTasksCount} {FilterType.completed}
-        </Badge> */}
+        </Badge>
       </div>
 
       {/* phần filter */}

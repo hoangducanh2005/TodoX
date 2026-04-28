@@ -1,7 +1,7 @@
 export const FilterType = {
-  all: "tất cả",
-  active: "đang làm",
-  completed: "hoàn thành",
+  all: "all",
+  active: "active",
+  completed: "completed",
 };
 
 export const options = [
