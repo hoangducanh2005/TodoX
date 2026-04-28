@@ -77,3 +77,40 @@ Sau đó dùng:
 import { Button } from "@/components/ui/button";
 
 <Button>Add Task</Button>
+
+-----
+Tim hieu them ve thu vien cva, cac variant
+cva là thư viện class-variance-authority, thường dùng trong shadcn/ui để quản lý class Tailwind theo nhiều kiểu khác nhau.
+
+Hiểu đơn giản:
+
+cva giúp một component có nhiều “biến thể giao diện” như primary, secondary, destructive, small, large...
+
+Ví dụ Button có thể có nhiều kiểu:
+
+<Button variant="default">Save</Button>
+<Button variant="destructive">Delete</Button>
+<Button size="sm">Small</Button>
+
+Vì sao cần cva?
+
+Không dùng cva, bạn phải viết kiểu này rất rối:
+
+<button className={variant === "destructive" ? "bg-red-500" : "bg-blue-500"}>
+
+Dùng cva thì gọn hơn:
+
+<Button variant="destructive" size="lg">
+  Delete
+</Button>
+
+Tóm gọn
+
+cva dùng để tạo nhiều phiên bản giao diện cho cùng một component.
+
+Ví dụ với Button:
+
+variant = màu/kiểu button
+size = kích thước button
+
+Nó rất hay dùng trong shadcn để component vừa đẹp, vừa dễ tái sử dụng.
